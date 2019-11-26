@@ -1,0 +1,130 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.tieude{
+	width: 100%;
+	background: #292a2c;
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: 100000;
+}
+.tieude .col-md-10 ul{
+	position: relative;
+	left: 270px;
+}
+.tieude .col-md-10 ul li{
+	list-style-type: none;
+	display: inline-block;
+}
+.tieude .col-md-10 ul a{
+	padding: 20px 10px;
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+}
+.tieude .col-md-10 ul a:hover{
+	color: #bc914d;
+}
+.tieude .col-md-10 ul{
+	padding: 22px;
+}
+.tieude .col-md-2 h4{
+	color: white;
+	font-family: "Times New Roman";
+	font-size: 24px;
+	text-align: center;
+	color: #bc914d;
+}
+.backg-loaiphong img{
+	width: 100%;
+}
+.backg-loaiphong p{
+	color: white;
+	/*position: relative;*/
+	top: -300px;
+	z-index: 100000;
+	text-align: center;
+	padding: 20px 20px;
+	font-size: 25px;
+}
+.backg-loaiphong .text-loai{
+	position: relative;
+	top: -300px;
+	border: 1px solid white;
+	margin: 30px 650px;
+}
+.phong{
+	position: relative;
+	top: -100px;
+	margin-top: 5px;
+}
+.phong .col-md-6 .phong-don img{
+	width: 569px;
+	padding-top: 50px;
+
+}
+.phong .col-md-6 .phong-don{
+	margin-left: 160px;
+
+}
+.phong .col-md-6 .phong-doi{
+	margin-right: 160px;
+}
+.phong .col-md-6 .phong-doi img{
+	width: 569px;
+	padding-top: 50px;
+}
+.text-phongdon{
+	width: 569px;
+	font-size: 18px;
+	background-color: white;
+/*	margin: 50px;*/
+	border: 1px solid pink;
+	margin-bottom: 50px;
+
+}
+.text-phongdoi{
+	width: 569px;
+	font-size: 18px;
+	background-color: white;
+	margin-top: 0;
+	border: 1px solid pink;
+	margin-bottom: 50px;
+}
+.text-phongdon h3{
+	text-align: center;
+	color: #b38c50;
+	font-weight: bold;
+}
+.text-phongdoi h3{
+	text-align: center;
+	color: #b38c50;
+	font-weight: bold;
+}
+.text-phongdon p{
+	padding:5px 15px;
+}
+.text-phongdoi p{
+	padding:5px 15px;
+}
+.gia{
+	font-size: 25px;
+	color: #263e5b;
+}
+.phong .col-md-6 a{
+	text-decoration: none;
+}
+.final{
+	background-color: #292a2c;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 750px;
+}
+.final h3{
+	text-align: center;
+
+}

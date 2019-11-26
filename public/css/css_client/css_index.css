@@ -1,0 +1,165 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.tieude{
+	width: 100%;
+	background: #292a2c;
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: 100000;
+}
+.tieude .col-md-10 ul{
+	position: relative;
+	left: 270px;
+}
+.tieude .col-md-10 ul li{
+	list-style-type: none;
+	display: inline-block;
+}
+.tieude .col-md-10 ul a{
+	padding: 20px 10px;
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+}
+.tieude .col-md-10 ul a:hover{
+	color: #bc914d;
+}
+.tieude .col-md-10 ul{
+	padding: 22px;
+}
+.tieude .col-md-2 h4{
+	color: white;
+	font-family: "Times New Roman";
+	font-size: 24px;
+	text-align: center;
+	color: #bc914d;
+}
+.backg img{
+	width: 100%;
+}
+.dat-phong{
+	position: relative;
+	top: -65px;	
+}
+.dat-phong  a{
+	text-decoration: none;
+	color: white;
+}
+.dat-phong a:hover{
+	color: green;
+}
+
+.dat-phong h4{
+	text-align: center;
+	padding: 32px;
+	font-size: 28px;
+}
+.about .col-md-6 .anh-about img{
+	width: 600px;
+}
+.about .col-md-6 .text-about h2{
+	font-weight: bold;
+	font-size: 35px;
+	margin-left: 140px;
+}
+.about .col-md-6 .text-about p{
+	font-size: 20px;
+	margin-left: 140px;
+}
+.phong{
+	margin-top: 30px;
+	border: 1px solid pink;
+}
+.phong h2{
+	text-align: center;
+	font-family: "Georgia";
+	font-weight: bold;
+	padding: 25px;
+	background-color: brown;
+	color: white;
+}
+.phong .col-md-6 .phong-don img{
+	width: 569px;
+	padding-top: 50px;
+
+}
+.phong .col-md-6 .phong-don{
+	margin-left: 160px;
+}
+.phong .col-md-6 .phong-doi{
+	margin-right: 160px;
+}
+.phong .col-md-6 .phong-doi img{
+	width: 569px;
+	padding-top: 50px;
+}
+.phong .col-md-6 a{
+	text-decoration: none;
+}
+.text-phongdon{
+	width: 569px;
+	font-size: 18px;
+	background-color: white;
+	border: 1px solid pink;
+	margin-bottom: 50px;
+
+}
+.text-phongdoi{
+	width: 569px;
+	font-size: 18px;
+	background-color: white;
+	margin-top: 0;
+	border: 1px solid pink;
+	margin-bottom: 50px;
+}
+.text-phongdon h3{
+	text-align: center;
+	color: #b38c50;
+	font-weight: bold;
+}
+.text-phongdoi h3{
+	text-align: center;
+	color: #b38c50;
+	font-weight: bold;
+}
+.text-phongdon p{
+	padding:5px 15px;
+}
+.text-phongdoi p{
+	padding:5px 15px;
+}
+.phong .col-md-6{
+	background-image: url(../../image/backg_room.jpg);
+	background-attachment: fixed;
+}
+.phong a{
+	text-decoration: none;
+}
+.dichvu h2{
+	margin-top: 680px;
+	text-align: center;
+	font-weight: bold;
+}
+.dichvu p{
+	text-align: center;
+	font-size: 17px;
+	padding: 12px;
+}
+.dichvu ul li{
+	font-size: 16px;
+}
+.final{
+	background-color: #292a2c;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 50px;
+}
+.final h3{
+	text-align: center;
+
+}*/

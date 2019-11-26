@@ -1,0 +1,298 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.fa-user-tie{
+	font-size: 30px;
+	color: white;
+	padding-right: 10px;
+}
+.fa-sign-out-alt{
+	padding-right: 5px;
+}
+.fa-user{
+	padding-right: 5px;
+}
+.title .col-md-10 .dangnhap{
+	width: 80px;
+	position: relative;
+	top: 15px;
+	left: 1130px;
+	color: white;
+	height: 50px;
+}
+.dropdown-toggle{
+	background-color: #3c8dbc;
+}
+.dropdown-toggle:hover{
+	background-color: #ffa026;
+}
+.dropdowm-toggle li{
+	color: black;
+}
+.dropdown-user{
+	margin-left: -50px;
+}
+.title{
+	background-color: #3c8dbc;
+	height: 80px;
+	width: 100%;
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.title .col-md-2 h3{
+	font-size: 23px;
+	text-align: center;
+	font-weight: bold;
+	font-family: Time new roman;
+	color: white;
+}
+.content .col-md-2{
+	background-color: #3c8dbc;
+	padding: 0;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	z-index: 100;
+}
+.content .col-md-2 ul{
+	background-color: #3c8dbc;
+	list-style-type: none;
+	list-style-position: outside;
+	display:block;
+}
+.content .col-md-2 li{
+	border-bottom: 1px solid white;
+	width: 100%;
+	height: 60px;
+	font-size: 18px;
+	font-weight: bold;	
+	padding:14px 12px;
+}
+.content .col-md-2 li a{
+	text-decoration: none;
+	color: white;
+}
+.content .col-md-2 li:hover{
+	background-color: #ffa026;
+}
+.content{
+	margin-left: 0;	
+	width: 100%;
+	height: 100%;
+	margin-top: 80px;
+}
+.content .col-md-10{
+	margin-left: 256px;
+}
+.ds-nut{
+	margin-top:15px;
+	margin-bottom:15px;
+	border-bottom: 1px solid gray;
+}
+.btn-primary{
+	margin: 5px;
+}
+.thongtin{
+	position: relative;
+	top: -50px;
+	float: right;
+	right: 100px;
+}
+.thongtin ul li{
+	display: inline-block;
+	margin-left: 60px;
+}
+#icon-phongtrong,#icon-dangthue,#icon-chuadon{
+	font-size: 20px;
+}
+#icon-phongtrong{
+	color: #00a65a;
+}
+#icon-dangthue{
+	color:red;
+}
+#icon-chuadon{
+	color: #aba9a9;
+}
+.fa-solar-panel{
+	font-size: 22px;
+	color: #00a65a; 
+	margin-right: 5px;
+}
+.fa-bed{
+	font-size: 22px;
+	color: red;
+	margin-right: 5px;
+}
+.fa-magic{
+	font-size: 22px;
+	color: #aba9a9;
+	margin-right: 5px;
+}
+.floor{
+	width: 60px;
+	font-weight: bold;
+	color: #3c8dbc;
+}
+.phong{
+	width: 200px;
+	height: 118px;
+	background-color: #00a65a;
+	margin:10px;
+	margin-left: 14px;
+	cursor: pointer;
+}
+.phong .tenphong{
+	font-size: 30px;
+	color: white;
+}
+.phong .loaiphong{
+	font-weight: bold;
+	color: #fff;
+}
+.phong .trangthai{
+	font-weight: bold;
+	color: #fff;
+}
+.none{
+	width: 190px;
+}
+.table-responsive{
+	position: absolute;
+	
+}
+.table-bordered{
+	text-align: center;
+}
+.form-khachhang{
+	width: 950px;
+	height: auto;
+	visibility: hidden;
+	background: #337ab7;
+	padding: 5px;
+	overflow: hidden;
+	position: absolute;
+	z-index: 99999999;
+	top:10%;
+	left:50%;
+	margin-left:-550px;
+}
+.form-khachhang2{
+	width: 950px;
+	height: auto;
+	visibility: hidden;
+	background: #337ab7;
+	padding: 5px;
+	overflow: hidden;
+	position: absolute;
+	z-index: 99999999;
+	top:10%;
+	left:50%;
+	margin-left:-550px;
+}
+.form-dichvu{
+	width: 600px;
+	height: auto;
+	visibility: hidden;
+	background: #337ab7;
+	padding: 5px;
+	overflow: hidden;
+	position: absolute;
+	z-index: 99999999;
+	top:10%;
+	left:50%;
+	margin-left:-420px;
+}
+
+.form-khachhang,.form-dichvu h3{
+	color:white;
+	/*font-size:20px;*/
+	padding-left:20px
+}
+.form-khachhang2 h3{
+	color:white;
+	/*font-size:20px;*/
+	padding-left:20px
+}
+.div1,.div3{
+	color: black;
+	background-color: #fff;
+	padding-top: 10px;
+	margin-left: 0px;
+}
+.div2{
+	background-color: #fff;
+	padding-top: 10px;
+}
+.form-group{
+	margin:2px;
+}
+.luu{
+	position: relative;
+	left: 710px;
+	height: 30px;
+}
+.luu2{
+	position: relative;
+	left: 710px;
+	height: 30px;
+}
+.luu3{
+	position: relative;
+	left: 410px;
+	height: 30px;
+}
+.huy{
+	position: relative;
+	left: 720px;
+	height: 30px;
+}
+.huy2{
+	position: relative;
+	left: 720px;
+	height: 30px;
+}
+.huy3{
+	position: relative;
+	left: 415px;
+	height: 30px;
+}
+.fa-save{
+	margin-right: 5px;
+}
+.fa-trash{
+	margin-right: 5px;
+}
+.form-khachhang input{
+	height: 25px;
+}
+.form-khachhang2 input{
+	height: 25px;
+}
+/*.form-khachhang select{
+	height: 25px;
+	padding: 3px;
+	font-size: 12px;
+}*/
+.form-khachhang2 select{
+	height: 25px;
+	padding: 3px;
+	font-size: 12px;
+}
+.ds-nut a{
+	text-decoration: none;
+	color: #fff;
+}
+.div3 table{
+	margin: 10px;
+	width: 550px;
+	margin-left: 20px;
+}
+.them{
+	position: relative;
+	left: 500px;
+}
