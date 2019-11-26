@@ -199,6 +199,7 @@
 				<div class="div3">
 					<div class="them"><button class="btn btn-success" id="nut-them">Thêm</button></div>
 					<form action="{{route('datdichvu_cthd')}}" method="POST">
+						<input type="hidden" name="_token" value="{{csrf_token()}}">
 						<table class="table table-sm table-bordered table-hover table-striped">
 							<thead>
 								<tr>
@@ -288,7 +289,7 @@
 			$('#over').fadeIn(300);
 
 		}
-		$(document).on('click', "#over", function() {
+		$(document).on('click', "#over,#nut-huy", function() {
 	       	$('#over, .thongtinphong').fadeOut(300 , function() {
 	           $('#over,.thongtinphong').remove();
 	       	});
@@ -355,13 +356,13 @@
 	    });
 	    var id=0;
 	    $(document).on('click',"#nut-them",function(){
-	    	$('#ds-dichvu').append("<tr><td><select name='' id='"+id+"' class='tendichvu'>\
-	    		<option disableD selected>Chọn dịch vụ</option>\
+	    	$('#ds-dichvu').append("<tr><td><select name='TenDichVu[tendv][]' id='"+id+"' class='tendichvu'>\
+	    		<option disabled selected>Chọn dịch vụ</option>\
 	    		@foreach($dichvu as $dv)\
 	    			<option values={{$dv->TENDICHVU}}>{{$dv->TENDICHVU}}</option>\
 	    		@endforeach\
 	    		</td>\
-	    		<td><input type='number' name='soluong' value='' class='soluong' id='sl"+id+"'></td>\
+	    		<td><input type='number' name='soluong[soluong][]' value='' class='soluong' id='sl"+id+"'></td>\
 	    		<td><span class='z' id='tt"+id+"'></span></td>\
 	    		</tr>");
 	    	id=id+1;

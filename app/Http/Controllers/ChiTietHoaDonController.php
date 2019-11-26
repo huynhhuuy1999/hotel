@@ -51,7 +51,25 @@ class ChiTietHoaDonController extends Controller
     }
 
     public function getDatDichVu(Request $rq){
-        
+        $dem=0;
+        session_start();
+        $maphong=$_SESSION['maphong'];
+        $mahoadon=hoadon::where('MAPHONG','=',$maphong,'and')->where('TRANGTHAI','=','Chưa thanh toán')->first();
+        foreach ($rq->TenDichVu['tendv'] as $key => $val) {
+            # code...
+            $madichvu=dichvu::where('TENDICHVU','=',$val)->first();
+            $soluong=$rq->soluong['soluong'][$dem];
+            DB::select(
+                'call PRO_DATDICHVUCHOKHACHHANG(?,?,?)',
+                [
+                    $mahoadon->MAHOADON,
+                    $madichvu->MADICHVU,
+                    (int)$soluong
+                ]
+            );
+            $dem=$dem+1;
+        }
+        return redirect('view_admin/QuanLyPhong/danhsach');
     }
 }
 ?>

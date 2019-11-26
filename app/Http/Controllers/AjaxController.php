@@ -52,15 +52,18 @@ class AjaxController extends Controller
             # code...
             echo "<button class='btn btn-primary' id='nut-datphong' style='' onclick='datPhong()'>Đặt phòng</button>";
             echo "<button class='btn btn-info' id='nut-thuephong' style='' onclick='thuePhong()'>Thuê phòng</button>";
+            echo "<button class='btn btn-danger' id='nut-huy' style='margin-left:5px' onclick=''>Hủy</button>";
         }
     	if ($phong->TRANGTHAI=='Chưa dọn') {
             # code...
             echo "<button type='submit' class='btn btn-success' id='nut-sansang' style='' ><a href='".route('donphong_phong')."' style='text-decoration:none;color:white'>Sẵn sàng</a></button>";
+            echo "<button class='btn btn-danger' id='nut-huy' style='margin-left:5px' onclick=''>Hủy</button>";
         }
     	if ($phong->TRANGTHAI=='Đang thuê') {
     		# code...
-    		echo "<button type='submit' class='btn btn-danger' id='nut-traphong'><a href='".route('traphong_phong')."' style='text-decoration:none;color:white'>Trả phòng</a></button>";
+    		echo "<button type='submit' class='btn btn-primary' id='nut-traphong' style=''><a href='".route('traphong_phong')."' style='text-decoration:none;color:white'>Trả phòng</a></button>";
     		echo "<button class='btn btn-warning' id='nut-dichvu' style='margin-left:5px' onclick='datDichVu()'>Dịch vụ</button>";
+            echo "<button class='btn btn-danger' id='nut-huy' style='margin-left:5px' onclick=''>Hủy</button>";
     	}
     	echo "</div>";
     	echo "</div>";

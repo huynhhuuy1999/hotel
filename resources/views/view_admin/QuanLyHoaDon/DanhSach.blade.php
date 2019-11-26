@@ -109,7 +109,7 @@
                 	alert(error);
                 }
             });
-            $('body').append("<div id='over' style='display:none;width:100%;height:100%;background:#342e2e;position:absolute;top:0;left:0;opacity:0.6;z-index:999'></div>");
+            $('body').append("<div id='over' style='display:none;width:100%;height:100%;background:#342e2e;position:absolute;top:0;left:0;opacity:0.6;z-index:999999'></div>");
 			$('#over').fadeIn(300);
 		}
 
