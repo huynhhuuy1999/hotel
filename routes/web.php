@@ -119,6 +119,9 @@ Route::group(['prefix'=> 'view_admin'],function(){
 
 	Route::group(['prefix'=>'QuanLyHoaDon'],function(){
 		Route::get('danhsach','HoaDonController@getDanhSach')->name('danhsach_hoadon');
+		Route::get('thongke','HoaDonController@getThongKe')->name('thongke_hoadon');
+		Route::get('bieudo','HoaDonController@getBieuDo')->name('bieudo_hoadon');
+		Route::get('pdfHoaDon','HoaDonController@getPDF')->name('pdf_hoadon');
 	});
 
 	Route::group(['prefix'=>'QuanLyChiTietHoaDon'],function(){

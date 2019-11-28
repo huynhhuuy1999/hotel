@@ -8,9 +8,6 @@
 	
 	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js"></script>
-	{{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script> --}}
-	{{-- <script src="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap.min.css"></script> --}}
-	{{-- <script src="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"></script> --}}
 
 	<script src="{{asset('bootstrap-3.3.7-dist/js/bootstrap.min.js')}}"></script>
 	<link rel="stylesheet" href="{{asset('bootstrap-3.3.7-dist/css/bootstrap.min.css')}}">
@@ -43,11 +40,11 @@
 					<li><a href="{{URL::route('danhsach_dichvu')}}"><i class="fas fa-concierge-bell"></i> Quản lý dịch vụ</a></li>
 					<li><a href="{{URL::route('danhsach_hoadon')}}"><i class="fas fa-money-bill"></i> Hóa đơn</a></li>
 					<li><a href="{{URL::route('danhsach_taikhoan')}}"><i class="fas fa-user-cog"></i> Quản lý tài khoản</a></li>
+					<li><a href="{{URL::route('thongke_hoadon')}}"><i class="fas fa-calculator"></i> Thống kê hóa đơn</a></li>
 				</ul>
 			</div>
 			<div class="col-md-10">
 				<h3>DANH SÁCH HÓA ĐƠN</h3>
-				{{-- <div class="table-responsive"> --}}
 				<div class="x">
 					<table id="verticalScroll" class="table table-sm table-bordered table-striped table-hover" cellspacing="0" width="100%">
 					<thead>
