@@ -16,8 +16,8 @@
 			</div>
 			<div class="col-md-10">
 				<ul>
-					<li><a href="{{URL::route('routeHome')}}">Home</a></li>
-					<li><a href="{{URL::route('routeRoom')}}">Room</a></li>
+					<li><a href="{{URL::route('view_home')}}">Trang chủ</a></li>
+					<li><a href="{{URL::route('view_phong')}}">Phòng</a></li>
 					
 				</ul>
 			</div>
@@ -30,9 +30,9 @@
 	<div class="phong">
 		<div class="col-md-6" >
 			<div class="phong-don">
-				<a href="{{URL::route('routePhongDon')}}"><img src="{{asset('image/phong_don.jpg')}}" alt=""></a>
+				<a href="{{URL::route('view_PhongDon')}}"><img src="{{asset('image/phong_don.jpg')}}" alt=""></a>
 				<div class="text-phongdon">
-					<a href="{{URL::route('routePhongDon')}}"><h3>PHÒNG BÌNH DÂN</h3></a>
+					<a href="{{URL::route('view_PhongDon')}}"><h3>PHÒNG BÌNH DÂN</h3></a>
 					<p>Phòng Deluxe với thiết kế hài hòa, nội thất sang trọng với đầy đủ tiện nghi hiện đại. Diện tích khoảng 60-65m<sub>2</sub>
 				 /phòng đều có cửa sổ, ban công.</p>
 				 	<p>Giá phòng: <strong class="gia">180000</strong>/ngày</p>
@@ -41,9 +41,9 @@
 		</div>
 		<div class="col-md-6" >
 			<div class="phong-doi">
-				<a href="{{URL::route('routePhongDoi')}}"><img src="{{asset('image/phong_doi.jpg')}}" alt=""></a>
+				<a href="{{URL::route('view_PhongDoi')}}"><img src="{{asset('image/phong_doi.jpg')}}" alt=""></a>
 				<div class="text-phongdoi">
-					<a href="{{URL::route('routePhongDoi')}}"><h3>PHÒNG HẠNG SANG</h3></a>
+					<a href="{{URL::route('view_PhongDoi')}}"><h3>PHÒNG HẠNG SANG</h3></a>
 					<p>Phòng Superior có diện tích khoảng 20m<sub>2</sub>  được thiết kế hài hòa với nội thất sang trọng và đầy đủ tiện nghi hiện đại và đến sự thoải mái, tiện lợi nhất.</p>
 					<p>Giá phòng: <strong class="gia">250000</strong>/ngày</p>
 				</div>

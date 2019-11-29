@@ -15,8 +15,8 @@
 			</div>
 			<div class="col-md-10">
 				<ul>
-					<li><a href="{{URL::route('routeHome')}}">Home</a></li>
-					<li><a href="{{URL::route('routeRoom')}}">Room</a></li>
+					<li><a href="{{URL::route('view_home')}}">Trang chủ</a></li>
+					<li><a href="{{URL::route('view_phong')}}">Phòng</a></li>
 				</ul>
 			</div>
 		</div>
@@ -59,8 +59,8 @@
 		<div class="container">
 			<h3><u>PHÒNG LIÊN QUAN</u></h3>
 			<div class="col-md-3">
-				<a href="{{URL::route('routePhongDoi')}}"><img src="{{asset('image/phong_doi.jpg')}}" alt=""></a>
-				<a href="{{URL::route('routePhongDoi')}}"><p>Phòng hạng sang</p></a>
+				<a href="{{URL::route('view_PhongDoi')}}"><img src="{{asset('image/phong_doi.jpg')}}" alt=""></a>
+				<a href="{{URL::route('view_PhongDoi')}}"><p>Phòng hạng sang</p></a>
 			</div>
 		</div>
 	</div>

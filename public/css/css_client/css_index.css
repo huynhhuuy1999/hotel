@@ -50,7 +50,8 @@
 	color: white;
 }
 .dat-phong a:hover{
-	color: green;
+	color: #d3b5b5;
+	text-decoration: none;
 }
 
 .dat-phong h4{

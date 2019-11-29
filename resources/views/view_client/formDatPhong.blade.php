@@ -16,8 +16,8 @@
 			</div>
 			<div class="col-md-10">
 				<ul>
-					<li><a href="{{URL::route('routeHome')}}">Home</a></li>
-					<li><a href="{{URL::route('routeRoom')}}">Room</a></li>
+					<li><a href="{{URL::route('view_home')}}">Trang chủ</a></li>
+					<li><a href="{{URL::route('view_phong')}}">Phòng</a></li>
 				</ul>
 			</div>
 		</div>
@@ -27,87 +27,88 @@
 		<div class="text-loai"><p>ĐĂNG KÍ</p></div>
 	</div>
 	<div class="container">
-		<form action="{{URL::route('test')}}" method="GET">
-			<div class="col-md-6">
-			<b>Ngày đến*</b><br>
-			<input type="date"><br>
-			<b>Người lớn</b><br>
-			<select name="" id="">
-				<option value="1" selected="" disabled="">Người lớn</option>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-			</select>
-		</div>
-		<div class="col-md-6">
-			<b>Ngày đi*</b><br>
-			<input type="date"><br>
-			<b>Trẻ em</b><br>
-			<select name="" id="">
-				<option value="1" selected="" disabled="">Trẻ em</option>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-			</select>
-		</div>
-		<div class="chon-phong">
+		@if(count($errors) > 0)
+			<div class="alert alert-danger">
+				@foreach($errors->all() as $err)
+					{{$err}} <br>
+				@endforeach
+			</div>
+		@endif
 
-			<table border="1px">
+		@if(session('thongbao'))
+			<div class="alert alert-success">
+				{{session('thongbao')}}
+			</div>
+		@endif
+		<form action="{{route('client_datphong')}}" method="POST">
+			<input type="hidden" name="_token" value="{{csrf_token()}}">
+			<div class="a">
+				<div class="col-md-6">
+					<label for="ngayden">Ngày đến*</label><br>
+					<input type="date" name="ngayden" id="ngayden"><br>
+				</div>
+				<div class="col-md-6">
+					<label for="ngaydi">Ngày đi*</label><br>
+					<input type="date" name="ngaydi" id="ngaydi"><br>
+				</div>
+			</div>
+			<div class="chon-phong">
 
-				<th>Loại phòng</th>
-				<th>Giá</th>
-				<th>Chọn</th>
-				<tr>
-					<td>Phòng đơn</td>
-					<td>180000/ngày</td>
-					<td><input type="radio" name="chon_phong"></td>
-				</tr>
-				<tr>
-					<td>Phòng đôi</td>
-					<td>250000/ngày</td>
-					<td><input type="radio" name="chon_phong"></td>
-				</tr>
-			</table>
-		</div>
-		<div class="col-md-6">
-			<b>Họ tên*</b><br>
-			<input type="text"><br>
-			<b>Giới tính*</b><br>
-			<select name="" id="">
-				<option value="Nam">Nam</option>
-				<option value="Nữ">Nữ</option>
-			</select>	
-			<b>CMND*</b><br>
-			<input type="mail">
-		</div>
-		<div class="col-md-6">
-			<b>Quốc gia*</b><br>
-			<input type="text" NAME="QG" id="quocgia"><br>
-			<b>Số điện thoại*</b><br>
-			<input type="text"><br>
-			<b>Địa chỉ*</b><br>
-			<input type="text">
-		</div>
-		<div class="gui">
-			<input type="submit" value="GỬI" id="gui">
-		</div>
-	</div>
+				<table border="1px">
+					<thead>
+						<tr>
+							<th>Loại phòng</th>
+							<th>Giá</th>
+							<th>Phòng còn</th>
+							<th>Chọn</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Phòng đơn</td>
+							<td>180000/ngày</td>
+							<td>{{count($phongDon)}}</td>
+							<td><input type="radio" name="chon_phong" value="1"></td>
+						</tr>
+						<tr>
+							<td>Phòng đôi</td>
+							<td>250000/ngày</td>
+							<td>{{count($phongDoi)}}</td>
+							<td><input type="radio" name="chon_phong" value="2"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="b">
+				<div class="col-md-6">
+					<label for="hoten">Họ tên*</label><br>
+					<input type="text" name="hoten" id="hoten"><br>
+					<label for="gioitinh">Giới tính*</label><br>
+					<select name="gioitinh" id="gioitinh">
+						<option value="Nam">Nam</option>
+						<option value="Nữ">Nữ</option>
+					</select>	
+					<label for="cmnd">CMND*</label><br>
+					<input type="text" name="cmnd" id="cmnd">
+				</div>
+				<div class="col-md-6">
+					<label for="quocgia">Quốc gia*</label><br>
+					<input type="text" name="quocgia" id="quocgia"><br>
+					<label for="sodienthoai">Số điện thoại*</label><br>
+					<input type="text" name="sodienthoai" id="sodienthoai"><br>
+					<label for="diachi">Địa chỉ*</label><br>
+					<input type="text" name="diachi" id="diachi">
+				</div>
+			</div>
+			<div class="gui">
+				<button type="submit" id="gui">Gửi</button> 
+			</div>
 		</form>
-		
-		
-		
-		
-		
+	</div>
 	<div class="final">
 		<h3>KHÁCH SẠN TAM NGƯ</h3>
 		<p>Địa chỉ: 12 Nguyễn Thị Minh Khai, quận 1, Thành phố Hồ Chí Minh</p>
 		<p><i class="fas fa-phone-alt"></i>Số điện thoại: 0345 790 193</p>
 	</div>
-
-	<script src="{{asset('js/test.js')}}"></script>
 </body>
 </html>

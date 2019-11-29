@@ -44,7 +44,6 @@
 }
 .backg-loaiphong p{
 	color: white;
-	/*position: relative;*/
 	top: -300px;
 	z-index: 100000;
 	text-align: center;
@@ -64,10 +63,25 @@
 .container{
 	margin-top: 50px;
 }
-.container .col-md-6 b{
+.container .col-md-6 label{
 	font-size: 20px;
 }
-.container .col-md-6 input{
+.container .a{
+	margin-top: -60px;
+	margin-bottom: 100px;
+}
+.container .b{
+	margin-top: 150px;
+}
+.container .a .col-md-6 input{
+	width: 100%;
+	font-size: 20px;
+	margin: 10px;
+	margin-left: 0px;
+	padding: 5px;
+	border: 1px solid black;
+}
+.container .b .col-md-6 input{
 	width: 100%;
 	font-size: 20px;
 	margin: 10px;
@@ -80,23 +94,27 @@
 	font-size: 20px;
 	margin: 10px;
 	margin-left: 0px;
-	padding: 10px;
+	padding: 5px;
 	border: 1px solid black;
+	height: 40px;
+}
+.chon-phong {
+	height: 100px;
 }
 .chon-phong table th{
 	text-align: center;	
 }
 .chon-phong table{
-	border: 1px solid black;
+	position: relative;
+	top: 30px;
 	text-align: center;
 	width: 530px;
 	font-size: 20px;
-	margin-top: 250px;
 	margin-left: 290px;
 	height: 100px;
-	margin-bottom: 40px;
 }
-.gui input{
+
+.gui button{
 	font-size: 20px;
 	padding: 10px 30px;
 	background-color: #ba8f4d;

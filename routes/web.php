@@ -33,22 +33,16 @@ Route::get('getForm',function(){
 Route::post('postform',['as'=>'postform','uses'=>'MyController@postform']);
 
 Route::group(['prefix'=>'view_client'],function(){
-	Route::get('home',function(){
-		return view('view_client.index');
-	})->name('routeHome');
-	Route::get('room',function(){
-		return view('view_client.room');
-	})->name('routeRoom');
-	Route::get('phongDon',function(){
-		return view('view_client.phongDon');
-	})->name('routePhongDon');
-	Route::get('phongDoi',function(){
-		return view('view_client.phongDoi');
-	})->name('routePhongDoi');
-	Route::get('formDatPhong',function(){
-		return view('view_client.formDatPhong');
-	})->name('routeFormDatPhong');
-}); 
+
+	Route::group(['prefix'=>'phong'],function(){
+		Route::get('home','ClientController@getHome')->name('view_home');
+		Route::get('phong','ClientController@getPhong')->name('view_phong');
+		Route::get('phongDon','ClientController@getPhongDon')->name('view_PhongDon');
+		Route::get('phongDoi','ClientController@getPhongDoi')->name('view_PhongDoi');
+		Route::get('formDatPhong','ClientController@getFormDatPhong')->name('view_FormDatPhong');
+		Route::post('datphong','ClientController@postDatPhong')->name('client_datphong');
+	});
+});
 
 Route::get('dangnhap','LoginController@getDangNhap')->name('dangnhap_login');
 Route::post('dangnhap','LoginController@postDangNhap')->name('dangnhap_login1');

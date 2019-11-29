@@ -15,8 +15,8 @@
 			</div>
 			<div class="col-md-10">
 				<ul>
-					<li><a href="{{URL::route('routeHome')}}">Home</a></li>
-					<li><a href="{{URL::route('routeRoom')}}">Room</a></li>
+					<li><a href="{{URL::route('view_home')}}">Trang chủ</a></li>
+					<li><a href="{{URL::route('view_phong')}}">Phòng</a></li>
 				</ul>
 			</div>
 		</div>
@@ -36,7 +36,7 @@
 			<b>Các tiện ích</b><br>
 			<div class="col-md-6">
 				<ul>
-					<li>Diện tích 60-65m<<sub>2</sub></li>
+					<li>Diện tích 60-65m<sub>2</sub></li>
 					<li>1 giường đôi hoặc 2 giường đơn</li>
 					<li>Phòng tắm với vách kính và vòi hoa sen</li>
 					<li>Điện thoại gọi trực tiếp trong nước và quốc tế</li>
@@ -59,8 +59,8 @@
 		<div class="container">
 			<h3><u>PHÒNG LIÊN QUAN</u></h3>
 			<div class="col-md-3">
-				<a href="{{URL::route('routePhongDon')}}"><img src="{{asset('image/phong_don.jpg')}}" alt=""></a>
-				<a href="{{URL::route('routePhongDon')}}"><p>Phòng bình dân</p></a>
+				<a href="{{URL::route('view_PhongDon')}}"><img src="{{asset('image/phong_don.jpg')}}" alt=""></a>
+				<a href="{{URL::route('view_PhongDon')}}"><p>Phòng bình dân</p></a>
 			</div>
 		</div>
 	</div>
