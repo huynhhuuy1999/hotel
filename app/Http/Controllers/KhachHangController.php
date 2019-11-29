@@ -22,16 +22,18 @@ class KhachHangController extends Controller
     	$this->validate($request,
     	[
     		'Ten'=>'required',
-    		'CMND'=>'required',
+    		'CMND'=>'required|numeric',
     		'QuocGia'=>'required',
-    		'SoDienThoai'=>'required',
+    		'SoDienThoai'=>'required|numeric',
     		'DiaChi'=>'required'
     	],
     	[
     		'Ten.required'=>'Bạn chưa nhập họ tên',
     		'CMND.required'=>'Bạn chưa nhập CMND',
+            'CMND.numeric'=>'CMND không hợp lệ',
     		'QuocGia'=>'Bạn chưa nhập quốc gia',
     		'SoDienThoai.required'=>'Bạn chưa nhập số điện thoại',
+            'SoDienThoai.numeric'=>'Số điện thoại không hợp lệ',
     		'DiaChi.required'=>'Bạn chưa nhập địa chỉ'
     	]);
     	$khachhang->HOTEN = $request->Ten;

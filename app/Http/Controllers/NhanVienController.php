@@ -24,8 +24,8 @@ class NhanVienController extends Controller
             'Email'=>'required|unique:nhanvien,Email',
             'NgaySinh'=>'required',
             'NgayVaoLam'=>'required',
-            'CMND'=>'required|unique:nhanvien,CMND',
-            'SoDienThoai'=>'required',
+            'CMND'=>'required|numeric|unique:nhanvien,CMND',
+            'SoDienThoai'=>'required|numeric',
             'DiaChi'=>'required'
         ],
         [
@@ -35,8 +35,10 @@ class NhanVienController extends Controller
             'NgaySinh.required'=>'Bạn chưa nhập ngày sinh',
             'NgayVaoLam.required'=>'Bạn chưa nhập ngày vào làm',
             'CMND.required'=>'Bạn chưa nhập CMND',
+            'CMND.numeric'=>'CMND không hợp lệ',
             'CMND.unique'=>'CMND của bạn đã tồn tại',
             'SoDienThoai.required'=>'Bạn chưa nhập số điện thoại',
+            'SoDienThoai.numeric'=>'Số điện thoại không hợp lệ',
             'DiaChi.required'=>'Bạn chưa nhập địa chỉ'
         ]);
 
@@ -67,8 +69,8 @@ class NhanVienController extends Controller
     		'Email'=>'required',
     		'NgaySinh'=>'required',
     		'NgayVaoLam'=>'required',
-    		'CMND'=>'required',
-    		'SoDienThoai'=>'required',
+    		'CMND'=>'required|numeric',
+    		'SoDienThoai'=>'required|numeric',
     		'DiaChi'=>'required'
     	],
     	[
@@ -77,7 +79,9 @@ class NhanVienController extends Controller
     		'NgaySinh.required'=>'Bạn chưa nhập ngày sinh',
     		'NgayVaoLam.required'=>'Bạn chưa nhập ngày vào làm',
     		'CMND.required'=>'Bạn chưa nhập CMND',
+            'CMND.numeric'=>'CMND không hợp lệ',
     		'SoDienThoai.required'=>'Bạn chưa nhập số điện thoại',
+            'SoDienThoai.numeric'=>'Số điện thoại không hợp lệ',
     		'DiaChi.required'=>'Bạn chưa nhập địa chỉ'
     	]);
     	$nhanvien->HOTEN = $request->Ten;

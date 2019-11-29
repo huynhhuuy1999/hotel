@@ -55,7 +55,7 @@ Route::post('dangnhap','LoginController@postDangNhap')->name('dangnhap_login1');
 
 
 
-Route::group(['prefix'=> 'view_admin'],function(){
+Route::group(['prefix'=> 'view_admin','middleware'=> 'adminLogin'],function(){
 
 	Route::group(['prefix'=>'QuanLyNhanVien'],function(){
 		Route::get('danhsach','NhanVienController@getDanhSach')->name('danhsach_nhanvien');
