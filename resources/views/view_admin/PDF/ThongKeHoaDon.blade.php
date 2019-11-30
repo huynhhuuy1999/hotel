@@ -54,12 +54,21 @@
 			</thead>
 			{{$nam=0}};
 			{{$tong=0}};
+			{{$tongnam=0}};
 			<tbody>
 				@foreach($thongke as $tk)
 					@if($tk->nam!=$nam)
+						@if($tongnam!=0)
+							<tr>
+								<td colspan="2" style="font-weight: bold;text-align: center;">Tổng doanh thu năm</td>
+								<td>{{$tongnam}}</td>
+							</tr>
+						@endif
 						<tr class="nam"><td colspan="3">{{$tk->nam}}</td></tr>
-						{{$nam=$tk->nam}}
+						{{$nam=$tk->nam}};
+						{{$tongnam=0}};
 					@endif
+					{{$tongnam=$tongnam+$tk->tongtienthanhtoan}};
 					<tr>
 						<td></td>
 						<td class="thang">{{$tk->thang}}</td>
@@ -67,6 +76,10 @@
 					</tr>
 					{{$tong=$tong+$tk->tongtienthanhtoan}};
 				@endforeach
+				<tr>
+					<td colspan="2" style="text-align: center;">Tổng doanh thu năm</td>
+					<td class="doanhthu">{{$tongnam}}</td>
+				</tr>
 				<tr>
 					<td colspan="2" style="text-align: center;" class="doanhthu">Tổng doanh thu</td>
 					<td class="doanhthu">{{$tong}}</td>

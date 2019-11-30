@@ -91,3 +91,11 @@
 .content .col-md-10 .ngay{
 	margin-top: 15px;
 }
+#nut-xemThongKe{
+	position: relative;
+	top: -50px;
+	left: 850px;
+}
+.col-xs-1 button{
+	margin-left: -30px;
+}

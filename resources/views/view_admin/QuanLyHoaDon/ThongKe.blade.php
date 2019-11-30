@@ -61,35 +61,41 @@
 							<div class="col-xs-3">
 								<input type="date" id="denngay" name="denngay" class="form-control">
 							</div>
+							<div class="col-xs-2"></div>
 							<div class="col-xs-1">
-								<button type="submit" class="btn btn-success thongke" onclick="thongke()" style="margin-left: 30px;">Thống kê</button>
+								<button type="submit" class="btn btn-success thongke" onclick="thongke()">Xuất PDF</button>
 							</div>
 						</div>
 					</form>
+					<button class="btn btn-info" onclick="xemThongKe()" id="nut-xemThongKe">Xem thống kê</button>
+				</div>
+				<div class="hienthi">
 					
 				</div>
-				<div id="chart" style="height: 450px;margin-top: 10px;">
+				{{-- <div id="chart" style="height: 450px;margin-top: 10px;">
 					
-				</div>
+				</div> --}}
 			</div>
 	</div>
 	</body>
+
 	<script>
-		
-			 Morris.Bar({
-		      element: 'chart',
-		      data: [
-		        { date: '04-02-2014', value: 3 },
-		        { date: '04-03-2014', value: 10 },
-		        { date: '04-04-2014', value: 5 },
-		        { date: '04-05-2014', value: 17 },
-		        { date: '04-06-2014', value: 6 }
-		      ],
-		      xkey: 'date',
-		      ykeys: ['value'],
-		      labels: ['Oders']
-		    });
-		
-		
+		function xemThongKe(){
+			$('.bang-thongke').remove();
+			var tungay=$('#tungay').val();
+			var denngay=$('#denngay').val();
+			var url1="{{ url('view_admin/QuanLyHoaDon/xemThongKe/')}}";
+			$.ajax({
+				type:'GET',
+				url:url1+"/"+tungay+"/"+denngay,
+				data:'_token = <?php echo csrf_token() ?>',
+				success: function( data ) {
+                	$('.hienthi').append(data);
+                },
+                error: function(error){
+                	alert(error);
+                }
+			});	
+		}
 	</script>
 </html>
