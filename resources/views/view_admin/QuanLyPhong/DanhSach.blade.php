@@ -64,18 +64,23 @@
 						<li id="icon-chuadon"><i class="fas fa-magic" data-toggle="tooltip" data-placement="bottom" title="Phòng chưa dọn"></i>{{$chuadon}}</li>
 					</ul>
 				</div>
+				@if(count($errors) > 0)
+					<div class="alert alert-danger">
+						"Đặt phòng thất bại"
+					</div>
+				@endif
 				<div class="table-responsive">
 					
 				</div>
 				<div class="form-khachhang">
 					<h3 >THÔNG TIN KHÁCH HÀNG</h3>
-					@if(count($errors) > 0)
+					{{-- @if(count($errors) > 0)
 						<div class="alert alert-danger">
 							@foreach($errors->all() as $err)
 								{{$err}} <br>
 							@endforeach
 						</div>
-					@endif
+					@endif --}}
 				<div class="div1">
 					<form class="form-horizontal" action="{{route('datPhong_phong')}}" method="POST">
 						<input type="hidden" name="_token" value="{{csrf_token()}}">
@@ -131,13 +136,13 @@
 			</div>
 			<div class="form-khachhang2" >
 					<h3 >THÔNG TIN KHÁCH HÀNG</h3>
-					@if(count($errors) > 0)
+					{{-- @if(count($errors) > 0)
 						<div class="alert alert-danger">
 							@foreach($errors->all() as $err)
 								{{$err}} <br>
 							@endforeach
 						</div>
-					@endif
+					@endif --}}
 					<div class="div2" >
 					<form class="form-horizontal" action="{{route('thuePhong_phong')}}" method="POST">
 						<input type="hidden" name="_token" value="{{csrf_token()}}">
@@ -318,7 +323,6 @@
 	    $(document).on('click', "#nut-thuephong", function() {
 	       	$('.thongtinphong').fadeOut(300 , function() {
 	           $('.thongtinphong').css('visibility','hidden');
-	          
 	       	});
 	    });
 	    function thuePhong(){
@@ -353,6 +357,7 @@
 	           $('.form-dichvu').css('visibility','hidden');
 	           $('#over').remove();
 	           $('.thongtinphong').remove();
+	           $('#ds-dichvu').empty();
 	       	});
 	    });
 	    var id=0;

@@ -24,6 +24,15 @@ class HoaDonController extends Controller
     // }
 
     public function getPDF(Request $rq){
+        $this->validate($rq,
+        [
+            'tungay'=>'required',
+            'denngay'=>'required'
+        ],
+        [
+            'tungay.required'=>'Bạn chưa nhập từ ngày',
+            'denngay.required'=>'Bạn chưa nhập đến ngày'
+        ]);
     	$tungay=$rq->tungay;
     	$denngay=$rq->denngay;
     	$thongke=DB::table('hoadon')->select(DB::raw("YEAR(NGAYDI) as nam"),DB::raw("MONTH(NGAYDI) as thang"),DB::raw("(SUM(TONGTIENTHANHTOAN)) as tongtienthanhtoan"))->where('NGAYDI','<',$rq->denngay,'and')->where('NGAYDI','>',$rq->tungay)->orderBy(DB::raw("YEAR(NGAYDI)",'DESC'))->orderBy(DB::raw("MONTH(NGAYDI)",'ASC'))->groupBy(DB::raw("YEAR(NGAYDI)"),DB::raw("MONTH(NGAYDI)"))->get();

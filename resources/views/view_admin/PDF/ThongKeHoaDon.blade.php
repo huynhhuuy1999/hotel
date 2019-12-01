@@ -33,6 +33,7 @@
 		}
 		.doanhthu{
 			background-color: #c6d062;
+			font-weight: bold;
 		}
 	</style>
 </head>
@@ -77,7 +78,7 @@
 					{{$tong=$tong+$tk->tongtienthanhtoan}};
 				@endforeach
 				<tr>
-					<td colspan="2" style="text-align: center;">Tổng doanh thu năm</td>
+					<td colspan="2" style="text-align: center;font-weight: bold">Tổng doanh thu năm</td>
 					<td class="doanhthu">{{$tongnam}}</td>
 				</tr>
 				<tr>

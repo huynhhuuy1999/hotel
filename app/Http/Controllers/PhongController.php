@@ -26,8 +26,8 @@ class PhongController extends Controller
             'ngayden'=>'required',
             'ngaydi'=>'required',
             'quocgia'=>'required',
-            'CMND'=>'required',
-            'dienthoai'=>'required',
+            'CMND'=>'required|numeric',
+            'dienthoai'=>'required|numeric',
             'diachi'=>'required'
         ],
         [
@@ -36,7 +36,9 @@ class PhongController extends Controller
             'ngaydi.required'=>'Bạn chưa nhập ngày đi',
             'quocgia.required'=>'Bạn chưa nhập quốc gia',
             'CMND.required'=>'Bạn chưa nhập CMND',
+            'CMND.numeric'=>'CMND không hợp lệ',
             'dienthoai.required'=>'Bạn chưa nhập số điện thoại',
+            'dienthoai.numeric'=>'Số điện thoại không hợp lệ',
             'diachi.required'=>'Bạn chưa nhập địa chỉ'
         ]);
     	session_start();

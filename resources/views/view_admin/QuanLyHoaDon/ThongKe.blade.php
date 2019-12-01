@@ -52,12 +52,20 @@
 				<div class="ngay">
 					<form action="{{route('pdf_hoadon')}}" class="form-horizontal">
 						<input type="hidden" name="_token" value="{{csrf_token()}}">
+						<div class="error"></div>
+						@if(count($errors) > 0)
+							<div class="alert alert-danger">
+								@foreach($errors->all() as $err)
+									{{$err}} <br>
+								@endforeach
+							</div>
+						@endif
 						<div class="form-group">
 							<label for="tungay" id="" class="control-label col-xs-1">Từ ngày:</label>
 							<div class="col-xs-3">
 								<input type="date" id="tungay" name="tungay" class="form-control">
 							</div>
-							<label for="denngay" id="" class="control-label col-xs-1">Từ ngày:</label>
+							<label for="denngay" id="" class="control-label col-xs-1">Đến ngày:</label>
 							<div class="col-xs-3">
 								<input type="date" id="denngay" name="denngay" class="form-control">
 							</div>
@@ -93,7 +101,7 @@
                 	$('.hienthi').append(data);
                 },
                 error: function(error){
-                	alert(error);
+                	alert("Bạn chưa nhập đầy đủ thông tin");
                 }
 			});	
 		}
