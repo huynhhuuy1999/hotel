@@ -30,13 +30,13 @@
 			<img src="{{asset('image/phong_doi.jpg')}}" alt="">
 		</div>
 		<div class="col-md-6">
-			<h3 class="text-phongbd">PHÒNG HẠNG SANG</h3>
-			<p>Phòng Superior có diện tích khoảng 20m2 được thiết kế hài hòa với nội thất sang trọng và đầy đủ tiện nghi hiện đại và đến sự thoải mái, tiện lợi nhất cho quý khách.</p>
-			<p>Phòng Superior gồm 2 giường nhỏ hoặc 1 giường lớn phù hợp với các cặp đôi đi du lịch nghỉ dưỡng. Phòng có thể có 1 cửa sổ nhỏ với hướng nhìn ra phía thành phố giúp quý khách có thể ngắm nhìn khung cảnh xinh đẹp xung quanh.</p>
+			<h3 class="text-phongbd">PHÒNG ĐÔI</h3>
+			<p>Phòng Đôi có diện tích khoảng 55-60m<sup>2</sup> được thiết kế hài hòa với nội thất sang trọng và đầy đủ tiện nghi hiện đại và đến sự thoải mái, tiện lợi nhất cho quý khách.</p>
+			<p>Phòng Đôi gồm 2 giường nhỏ hoặc 1 giường lớn phù hợp với các cặp đôi đi du lịch nghỉ dưỡng. Phòng có thể có 1 cửa sổ nhỏ với hướng nhìn ra phía thành phố giúp quý khách có thể ngắm nhìn khung cảnh xinh đẹp xung quanh.</p>
 			<b>Các tiện ích</b><br>
 			<div class="col-md-6">
 				<ul>
-					<li>Diện tích 60-65m<sub>2</sub></li>
+					<li>Diện tích 55-60m<sup>2</sup></li>
 					<li>1 giường đôi hoặc 2 giường đơn</li>
 					<li>Phòng tắm với vách kính và vòi hoa sen</li>
 					<li>Điện thoại gọi trực tiếp trong nước và quốc tế</li>
@@ -60,7 +60,7 @@
 			<h3><u>PHÒNG LIÊN QUAN</u></h3>
 			<div class="col-md-3">
 				<a href="{{URL::route('view_PhongDon')}}"><img src="{{asset('image/phong_don.jpg')}}" alt=""></a>
-				<a href="{{URL::route('view_PhongDon')}}"><p>Phòng bình dân</p></a>
+				<a href="{{URL::route('view_PhongDon')}}"><p>Phòng Đơn</p></a>
 			</div>
 		</div>
 	</div>

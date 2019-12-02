@@ -82,22 +82,22 @@
 			<div class="b">
 				<div class="col-md-6">
 					<label for="hoten">Họ tên*</label><br>
-					<input type="text" name="hoten" id="hoten"><br>
+					<input type="text" name="hoten" id="hoten"  autocomplete="off"><br>
 					<label for="gioitinh">Giới tính*</label><br>
 					<select name="gioitinh" id="gioitinh">
 						<option value="Nam">Nam</option>
 						<option value="Nữ">Nữ</option>
 					</select>	
 					<label for="cmnd">CMND*</label><br>
-					<input type="text" name="cmnd" id="cmnd">
+					<input type="text" name="cmnd" id="cmnd" autocomplete="off">
 				</div>
 				<div class="col-md-6">
 					<label for="quocgia">Quốc gia*</label><br>
-					<input type="text" name="quocgia" id="quocgia"><br>
+					<input type="text" name="quocgia" id="quocgia" autocomplete="off"><br>
 					<label for="sodienthoai">Số điện thoại*</label><br>
-					<input type="text" name="sodienthoai" id="sodienthoai"><br>
+					<input type="text" name="sodienthoai" id="sodienthoai" autocomplete="off"><br>
 					<label for="diachi">Địa chỉ*</label><br>
-					<input type="text" name="diachi" id="diachi">
+					<input type="text" name="diachi" id="diachi" autocomplete="off">
 				</div>
 			</div>
 			<div class="gui">

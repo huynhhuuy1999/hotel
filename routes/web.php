@@ -11,27 +11,6 @@
 |
 */
 
-Route::get('duocGoi',function(){
-	echo "tao da duoc goi lan nua";
-})->name('goiDi');
-Route::get('goi',function(){
-	return redirect()->route('goiDi');
-});
-Route::group(['prefix'=>'MyGroup'],function(){
-	Route::get('user1',function(){echo 'user1';});
-	Route::get('user2',function(){echo 'user2';});
-	Route::get('/index1',function(){
-		return view('view_client.room');
-	})->name('room');
-});
-Route::get('goiController','MyController@xinChao');
-Route::get('ts/{ts}','MyController@test_thamso');
-Route::get('url','MyController@getURL');
-Route::get('getForm',function(){
-	return view('test_form');
-});
-Route::post('postform',['as'=>'postform','uses'=>'MyController@postform']);
-
 Route::group(['prefix'=>'view_client'],function(){
 
 	Route::group(['prefix'=>'phong'],function(){
@@ -127,16 +106,5 @@ Route::group(['prefix'=> 'view_admin','middleware'=> 'adminLogin'],function(){
 		Route::get('ttphong/{id}','AjaxController@getTTPhong')->name('thongtin_phong');
 	});
 
-});
-
-Route::get('test',function(){
-	return view('view_client.test');
-})->name('test');
-
-Route::get('model/test/save',function(){
-	$x=new App\loaitaikhoan();
-	$x->TENLOAITAIKHOAN="ABC";
-	$x->save();
-	echo "thêm thành công";
 });
 

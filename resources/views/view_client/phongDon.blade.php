@@ -30,13 +30,13 @@
 			<img src="{{asset('image/phong_don.jpg')}}" alt="">
 		</div>
 		<div class="col-md-6">
-			<h3 class="text-phongbd">PHÒNG BÌNH DÂN</h3>
-			<p>Phòng Deluxe với thiết kế hài hòa, nội thất sang trọng với đầy đủ tiện nghi hiện đại. Diện tích khoảng 60-65m2 mỗi phòng đều được trang bị cửa sổ và ban công mang lại không gian thoáng mát, thoải mái nhất cho quý khách.</p>
+			<h3 class="text-phongbd">PHÒNG ĐƠN</h3>
+			<p>Phòng Đơn với thiết kế hài hòa, nội thất sang trọng với đầy đủ tiện nghi hiện đại. Diện tích khoảng 35-40m<sup>2</sup>  mỗi phòng đều được trang bị cửa sổ và ban công mang lại không gian thoáng mát, thoải mái nhất cho quý khách.</p>
 			<p>Phòng có nội thất sang trọng, sàn gỗ cao cấp, không gian rộng rãi, có cửa sổ và ban công hướng nhìn ra biển, quý khách có thể dễ dàng ngắm cảnh hoàng hôn hay bình minh ngay trong phòng mình.</p>
 			<b>Các tiện ích</b><br>
 			<div class="col-md-6">
 				<ul>
-					<li>Diện tích 60-65m<sub>2</sub></li>
+					<li>Diện tích 35-40m<sup>2</sup></li>
 					<li>Điều hòa 2 chiều</li>
 					<li>Điện thoại</li>
 					<li>Mini Bar và đồ uống</li>
@@ -60,7 +60,7 @@
 			<h3><u>PHÒNG LIÊN QUAN</u></h3>
 			<div class="col-md-3">
 				<a href="{{URL::route('view_PhongDoi')}}"><img src="{{asset('image/phong_doi.jpg')}}" alt=""></a>
-				<a href="{{URL::route('view_PhongDoi')}}"><p>Phòng hạng sang</p></a>
+				<a href="{{URL::route('view_PhongDoi')}}"><p>Phòng Đôi</p></a>
 			</div>
 		</div>
 	</div>

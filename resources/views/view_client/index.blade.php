@@ -33,8 +33,8 @@
 			<div class="col-md-6">
 				<div class="text-about">
 					<h2 id="about">Về chúng tôi</h2>
-					<p>Đến với Fibo Hotel, bạn sẽ được hòa mình vào với thiên nhiên trong lành, được tham gia các hoạt động vui chơi giải trí, thư giãn nghỉ ngơi để trút bỏ hết những ưu phiền và bộn bề của cuộc sống.</p>
-					<p>Khu khách sạn sang trọng với đầy đủ các hạng mục tiện nghi gồm nhiều loại phòng và bungalow hiện đại kết hợp phong cách truyền thống, hệ thống bể bơi bể sục đa năng cùng hệ thống nhà hàng, phòng hội nghị, khu vui chơi, nhà hàng…</p>
+					<p>Đến với Khách sạn Tam Ngư, bạn sẽ được hòa mình vào với thiên nhiên trong lành, được tham gia các hoạt động vui chơi giải trí, thư giãn nghỉ ngơi để trút bỏ hết những ưu phiền và bộn bề của cuộc sống.</p>
+					<p>Khu khách sạn sang trọng với đầy đủ các hạng mục tiện nghi gồm nhiều loại phòng và nhà gỗ hiện đại kết hợp phong cách truyền thống, hệ thống bể bơi bể sục đa năng cùng hệ thống nhà hàng, phòng hội nghị, khu vui chơi,…</p>
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -51,9 +51,9 @@
 			<div class="phong-don">
 				<a href="{{URL::route('view_PhongDon')}}"><img src="{{asset('image/phong_don.jpg')}}" alt=""></a>
 				<div class="text-phongdon">
-					<a href="{{URL::route('view_PhongDon')}}"><h3>PHÒNG BÌNH DÂN</h3></a>
-					<p>Phòng Deluxe với thiết kế hài hòa, nội thất sang trọng với đầy đủ tiện nghi hiện đại. Diện tích khoảng 60-65m<sub>2</sub>
-				 /phòng đều có cửa sổ, ban công.</p>
+					<a href="{{URL::route('view_PhongDon')}}"><h3>PHÒNG ĐƠN</h3></a>
+					<p>Phòng Đơn với thiết kế hài hòa, nội thất sang trọng với đầy đủ tiện nghi hiện đại. Phòng có diện tích khoảng 35-40m<sup>2</sup>
+				 	đều có cửa sổ, ban công.</p>
 				</div>
 			</div>
 		</div>
@@ -61,8 +61,8 @@
 			<div class="phong-doi">
 				<a href="{{URL::route('view_PhongDoi')}}"><img src="{{asset('image/phong_doi.jpg')}}" alt=""></a>
 				<div class="text-phongdoi">
-					<a href="{{URL::route('view_PhongDoi')}}"><h3>PHÒNG HẠNG SANG</h3></a>
-					<p>Phòng Superior có diện tích khoảng 20m<sub>2</sub>  được thiết kế hài hòa với nội thất sang trọng và đầy đủ tiện nghi hiện đại và đến sự thoải mái, tiện lợi nhất.</p>
+					<a href="{{URL::route('view_PhongDoi')}}"><h3>PHÒNG ĐÔI</h3></a>
+					<p>Phòng Đôi có diện tích khoảng 55-60m<sup>2</sup>  được thiết kế hài hòa với nội thất sang trọng và đầy đủ tiện nghi hiện đại và đến sự thoải mái, tiện lợi nhất.</p>
 				</div>
 			</div>
 		</div>
