@@ -70,7 +70,7 @@
 					</div>
 				@endif
 				<div class="table-responsive">
-					
+										
 				</div>
 				<div class="form-khachhang">
 					<h3 >THÔNG TIN KHÁCH HÀNG</h3>

@@ -81,7 +81,7 @@
 							<td>{{$nv->NGAYVAOLAM}}</td>
 							<td>{{$nv->CMND}}</td>
 							<td>{{$nv->SDT}}</td>
-							<td>{{$nv->GIOITINH}}</td>
+							<td>{{$nv->GIOITINH}}</td>	
 							<td>{{$nv->EMAIL}}</td>
 							<td>{{$nv->DIACHI}}</td>
 							<td style="text-align: center;">{{$nv->TRANGTHAI}}</td>

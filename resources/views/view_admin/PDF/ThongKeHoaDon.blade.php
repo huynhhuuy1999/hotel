@@ -79,7 +79,7 @@
 				@endforeach
 				<tr>
 					<td colspan="2" style="text-align: center;font-weight: bold">Tổng doanh thu năm</td>
-					<td class="doanhthu">{{$tongnam}}</td>
+					<td>{{$tongnam}}</td>
 				</tr>
 				<tr>
 					<td colspan="2" style="text-align: center;" class="doanhthu">Tổng doanh thu</td>
