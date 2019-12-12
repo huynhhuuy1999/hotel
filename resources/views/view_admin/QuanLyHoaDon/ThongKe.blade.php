@@ -30,7 +30,7 @@
 						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-user-tie"></i><span class="caret"></span></button>
 						<ul class="dropdown-menu dropdown-user">
 							<li><a href=""><i class="fas fa-user"></i>{{Auth::user()->name}}</a></li>
-							<li><a href="{{URL::route('dangnhap_login')}}"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>
+							<li><a href="{{URL::route('dangxuat_login')}}"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a></li>
 						</ul>
 					</div>
          		</div>

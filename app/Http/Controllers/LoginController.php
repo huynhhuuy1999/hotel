@@ -34,5 +34,10 @@ class LoginController extends Controller
     	}
     }
 
+    public function getDangXuat(){
+        Auth::logout();
+        return view('view_admin.QuanLyDangNhap.login');
+    }
+
     
 }
