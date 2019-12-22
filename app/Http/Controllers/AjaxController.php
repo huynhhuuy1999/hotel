@@ -14,7 +14,11 @@ class AjaxController extends Controller
     public function getTTPhong($maphong){
     	$phong=phong::where('MAPHONG','=',$maphong)->first();
         $hoadon=hoadon::where('MAPHONG','=',$maphong,'and')->where('TRANGTHAI','=','Chưa thanh toán')->first();
-    	session_start();
+    	
+        // if (session_status() == PHP_SESSION_NONE) {
+        //     session_start();
+        // }
+        session_start();
     	$_SESSION['maphong'] = $phong->MAPHONG;
     	echo "<div class='thongtinphong' style='visibility:hidden;height:auto;width:550px;background:#337ab7;overflow:hidden;position:absolute;z-index:999999;top:10%;left:50%;margin-left:-250px;'>";
     	echo "<h3 style='color:white;font-size:20px;padding-left:20px'>PHÒNG ".$phong->MAPHONG."</h3>";

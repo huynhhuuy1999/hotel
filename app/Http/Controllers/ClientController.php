@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\phong;
+// use App\Rules\NgayDi;
 use DB;
 
 class ClientController extends Controller
@@ -32,6 +33,11 @@ class ClientController extends Controller
     }
 
     public function postDatPhong(Request $rq){
+        // session_start();
+        // if (session_status() == PHP_SESSION_NONE) {
+        //     session_start();
+        // }
+        // $_SESSION['ngayden'] = $rq->ngayden;
     	$this->validate($rq,
     	[
     		'ngayden'=>'required',
@@ -55,6 +61,7 @@ class ClientController extends Controller
     		'diachi.required'=>'Bạn chưa nhập địa chỉ',
     		'quocgia.required'=>'Bạn chưa nhập quốc gia'
     	]);
+        // $this->validate($rq,['ngaydi'=> new NgayDi]);
 
     	$phong=phong::where('MALOAIPHONG','=',$rq->chon_phong,'and')->where('TRANGTHAI','=','Trống')->first();
     	DB::select(
@@ -72,6 +79,9 @@ class ClientController extends Controller
 	        	$rq->ngaydi
 	    	]
 		);
+        if($rq->ngaydi< $rq->ngayden){
+            return redirect('view_client/phong/formDatPhong')->with('thongbao1','Ngày đi phải lớn hơn ngày đến');
+        }
 		return redirect('view_client/phong/formDatPhong')->with('thongbao','Đặt phòng thành công');
     }
 }

@@ -46,7 +46,7 @@
 				@if($p->TRANGTHAI=='Trống')
 					{{$phongtrong=$phongtrong+1}};
 				@endif
-				@if($p->TRANGTHAI=='Đang thuê')
+				@if($p->TRANGTHAI=='Đang thuê' || $p->TRANGTHAI=='Đã đặt trước')
 					{{$dangthue=$dangthue+1}};
 				@endif
 				@if($p->TRANGTHAI=='Chưa dọn')
@@ -67,6 +67,12 @@
 				@if(count($errors) > 0)
 					<div class="alert alert-danger">
 						"Đặt phòng thất bại"
+					</div>
+				@endif
+
+				@if(session('thongbao1'))
+					<div class="alert alert-danger">
+						{{session('thongbao1')}}
 					</div>
 				@endif
 				<div class="table-responsive">

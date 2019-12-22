@@ -40,6 +40,12 @@
 				{{session('thongbao')}}
 			</div>
 		@endif
+
+		@if(session('thongbao1'))
+			<div class="alert alert-danger">
+				{{session('thongbao1')}}
+			</div>
+		@endif
 		<form action="{{route('client_datphong')}}" method="POST">
 			<input type="hidden" name="_token" value="{{csrf_token()}}">
 			<div class="a">

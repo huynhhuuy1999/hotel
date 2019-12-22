@@ -9,7 +9,10 @@ use App\User;
 
 class AutoLogout
 {
-    protected $timeout=60;
+    protected $timeout=900;
+    public function __construct()
+    {
+    }
     /**
      * Handle an incoming request.
      *

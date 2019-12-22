@@ -28,9 +28,9 @@ Route::post('dangnhap','LoginController@postDangNhap')->name('dangnhap_login1');
 Route::get('dangxuat','LoginController@getDangXuat')->name('dangxuat_login');
 
 
-Route::group(['prefix'=> 'view_admin','middleware'=> 'adminLogin'],function(){
+Route::group(['prefix'=> 'view_admin','middleware'=> ['adminLogin','web']],function(){
 
-	Route::group(['prefix'=>'QuanLyNhanVien','middleware'=>'web'],function(){
+	Route::group(['prefix'=>'QuanLyNhanVien'],function(){
 		Route::get('danhsach','NhanVienController@getDanhSach')->name('danhsach_nhanvien');
 
 		Route::get('them','NhanVienController@getThem')->name('them_nhanvien');
@@ -42,7 +42,7 @@ Route::group(['prefix'=> 'view_admin','middleware'=> 'adminLogin'],function(){
 		Route::get('xoa/{MaNhanVien}','NhanVienController@getXoa')->name('xoa_nhanvien');
 	});
 
-	Route::group(['prefix'=>'QuanLyDichVu','middleware'=>'web'],function(){
+	Route::group(['prefix'=>'QuanLyDichVu'],function(){
 		Route::get('danhsach','DichVuController@getDanhSach')->name('danhsach_dichvu');
 
 		Route::get('them','DichVuController@getThem')->name('them_dichvu');
@@ -54,7 +54,7 @@ Route::group(['prefix'=> 'view_admin','middleware'=> 'adminLogin'],function(){
 		Route::get('xoa/{MaDichVu}','DichVuController@getXoa')->name('xoa_dichvu');
 	});
 
-	Route::group(['prefix'=>'QuanLyKhachHang','middleware'=>'web'],function(){
+	Route::group(['prefix'=>'QuanLyKhachHang'],function(){
 		Route::get('danhsach','KhachHangController@getDanhSach')->name('danhsach_khachhang');
 
 		Route::get('them','KhachHangController@getThem')->name('them_khachhang');
@@ -64,7 +64,7 @@ Route::group(['prefix'=> 'view_admin','middleware'=> 'adminLogin'],function(){
 		Route::post('sua/{MaKhachHang}','KhachHangController@postSua')->name('sua_khachhang1');
 	});
 
-	Route::group(['prefix'=>'QuanLyTaiKhoan','middleware'=>'web'],function(){
+	Route::group(['prefix'=>'QuanLyTaiKhoan'],function(){
 		Route::get('danhsach','TaiKhoanController@getDanhSach')->name('danhsach_taikhoan');
 
 		Route::get('them','TaiKhoanController@getThem')->name('them_taikhoan');
@@ -76,7 +76,7 @@ Route::group(['prefix'=> 'view_admin','middleware'=> 'adminLogin'],function(){
 		Route::get('xoa/{id}','TaiKhoanController@getXoa')->name('xoa_taikhoan');
 	});
 
-	Route::group(['prefix'=>'QuanLyPhong','middleware'=>'web'],function(){
+	Route::group(['prefix'=>'QuanLyPhong'],function(){
 		Route::get('danhsach','PhongController@getDanhSach')->name('danhsach_phong');
 		Route::post('datphong','PhongController@postDatPhong')->name('datPhong_phong');
 		Route::post('thuephong','PhongController@postThuePhong')->name('thuePhong_phong');
@@ -84,25 +84,25 @@ Route::group(['prefix'=> 'view_admin','middleware'=> 'adminLogin'],function(){
 		Route::get('donphong','PhongController@getDonPhong')->name('donphong_phong');
 	});
 
-	Route::group(['prefix'=>'QuanLyPhieuDatPhong','middleware'=>'web'],function(){
+	Route::group(['prefix'=>'QuanLyPhieuDatPhong'],function(){
 		Route::get('danhsach','PhieuDatPhongController@getDanhSach')->name('danhsach_phieu');
 		Route::get('huy/{id}','PhieuDatPhongController@getHuy')->name('huy_phieu');
 		Route::get('nhan/{id}','PhieuDatPhongController@getNhan')->name('nhan_phieu');
 	});
 
-	Route::group(['prefix'=>'QuanLyHoaDon','middleware'=>'web'],function(){
+	Route::group(['prefix'=>'QuanLyHoaDon'],function(){
 		Route::get('danhsach','HoaDonController@getDanhSach')->name('danhsach_hoadon');
 		Route::get('thongke','HoaDonController@getThongKe')->name('thongke_hoadon');
 		Route::get('pdfHoaDon','HoaDonController@getPDF')->name('pdf_hoadon');
 		Route::get('xemThongKe/{id1}/{id2}','HoaDonController@getXemThongKe')->name('xemthongke_hoadon');
 	});
 
-	Route::group(['prefix'=>'QuanLyChiTietHoaDon','middleware'=>'web'],function(){
+	Route::group(['prefix'=>'QuanLyChiTietHoaDon'],function(){
 		Route::get('danhsach/{id}','ChiTietHoaDonController@getDanhSach')->name('danhsach_cthd');
 		Route::post('datdichvu','ChiTietHoaDonController@getDatDichVu')->name('datdichvu_cthd');
 	});
 
-	Route::group(['prefix'=>'Ajax','middleware'=>'web'],function(){
+	Route::group(['prefix'=>'Ajax'],function(){
 		Route::get('ttphong/{id}','AjaxController@getTTPhong')->name('thongtin_phong');
 	});
 

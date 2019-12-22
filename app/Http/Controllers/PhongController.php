@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\phong;
 use App\hoadon;
 use App\dichvu;
+use Carbon\Carbon;
 use DB;
 
 class PhongController extends Controller
@@ -20,6 +21,11 @@ class PhongController extends Controller
     }
 
     public function postDatPhong(Request $request){
+        // if (session_status() == PHP_SESSION_NONE) {
+        //     session_start();
+        // }
+        
+        // $this->validate($request,['ngaydi' => new NgayDi]);
     	$this->validate($request,
         [
             'Ten'=>'required',
@@ -41,8 +47,8 @@ class PhongController extends Controller
             'dienthoai.numeric'=>'Số điện thoại không hợp lệ',
             'diachi.required'=>'Bạn chưa nhập địa chỉ'
         ]);
+
     	session_start();
-		
         DB::select(
 	    	'call PRO_LUUTHONGTINDATPHONG(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
 	    	[
@@ -58,6 +64,9 @@ class PhongController extends Controller
 	        	$request->ngaydi
 	    	]
 		);
+        if($request->ngayden> $request->ngaydi){
+            return redirect('view_admin/QuanLyPhong/danhsach')->with('thongbao1',"Đặt phòng thất bại");
+        }
 		return redirect('view_admin/QuanLyPhong/danhsach');
     }
 
@@ -67,8 +76,8 @@ class PhongController extends Controller
             'Ten'=>'required',
             'ngaydi'=>'required',
             'quocgia'=>'required',
-            'CMND'=>'required',
-            'dienthoai'=>'required',
+            'CMND'=>'required|numeric',
+            'dienthoai'=>'required|numeric',
             'diachi'=>'required'
         ],
         [
@@ -76,11 +85,15 @@ class PhongController extends Controller
             'ngaydi.required'=>'Bạn chưa nhập ngày đi',
             'quocgia.required'=>'Bạn chưa nhập quốc gia',
             'CMND.required'=>'Bạn chưa nhập CMND',
+            'CMND.numeric'=>'CMND không hợp lệ',
             'dienthoai.required'=>'Bạn chưa nhập số điện thoại',
+            'dienthoai.numeric'=>'Số điện thoại không hợp lệ',
             'diachi.required'=>'Bạn chưa nhập địa chỉ'
         ]);
         session_start();
-        
+        // if (session_status() == PHP_SESSION_NONE) {
+        //     session_start();
+        // }
         DB::select(
             'call PRO_LUUTHONGTINTHUEPHONG(?, ?, ?, ?, ?, ?, ?, ?, ?)',
             [
@@ -95,11 +108,17 @@ class PhongController extends Controller
                 $request->ngaydi
             ]
         );
+        if($request->ngaydi< Carbon::now('Asia/Ho_Chi_Minh')){
+            return redirect('view_admin/QuanLyPhong/danhsach')->with("thongbao1","Ngày thuê không hợp lệ");
+        }
         return redirect('view_admin/QuanLyPhong/danhsach');
     }
 
     public function getTraPhong(){
         session_start();
+        // if (session_status() == PHP_SESSION_NONE) {
+        //     session_start();
+        // }
         $hoadon=hoadon::where('MAPHONG','=',$_SESSION['maphong'],'and')->where('TRANGTHAI','=','Chưa thanh toán')->first();
         DB::select(
             'call PRO_THANHTOANHOADON(?)',
@@ -110,6 +129,9 @@ class PhongController extends Controller
 
     public function getDonPhong(){
         session_start();
+        // if (session_status() == PHP_SESSION_NONE) {
+        //     session_start();
+        // }
         $phong=phong::where('MAPHONG','=',$_SESSION['maphong'],'and')->where('TRANGTHAI','=','Chưa dọn')->first();
 
         $phong->TRANGTHAI='Trống';
