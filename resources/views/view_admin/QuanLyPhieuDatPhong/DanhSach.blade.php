@@ -5,6 +5,9 @@
 	<title>Document</title>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js"></script>
+
 	<script src="{{asset('bootstrap-3.3.7-dist/js/bootstrap.min.js')}}"></script>
 	<link rel="stylesheet" href="{{asset('bootstrap-3.3.7-dist/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('fontawesome-free-5.11.2-web/css/all.css')}}">
@@ -48,8 +51,8 @@
 						{{session('thongbao')}}
 					</div>
 				@endif
-				<div class="table-responsive">
-					<table class="table table-sm table-bordered table-striped table-hover">
+				{{-- <div class="table-responsive"> --}}
+				<table id="verticalScroll" class="table table-sm table-bordered table-striped table-hover">
 					<thead>
 						<tr>
 							<th scope="col">ID</th>
@@ -79,9 +82,18 @@
 						@endforeach
 					</tbody>
 				</table>
-				</div>
+				{{-- </div> --}}
 			</div>
 	</div>
+	<script>
+		$(document).ready(function(){
+			$("#verticalScroll").DataTable({
+				"scrollY": "380px",
+				"scrollCollapse": true
+			});
+			$('.dataTables_length').addClass('bs-select');
+		});
 		
+	</script>
 </body>
 </html>

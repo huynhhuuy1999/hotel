@@ -40,7 +40,6 @@ class ChiTietHoaDonController extends Controller
 	    		$tongtien=$tongtien+$ct->THANHTIEN;
     		}
     	}
-    	
     	echo "<tr>";
     	echo "<td colspan=3 style='text-align:center'>Tổng tiền</td>";
     	echo "<td>".$tongtien."</td>";
