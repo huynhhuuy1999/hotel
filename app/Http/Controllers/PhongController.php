@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\phong;
 use App\hoadon;
 use App\dichvu;
+use App\phieudatphong;
 use Carbon\Carbon;
 use DB;
 
@@ -137,5 +138,30 @@ class PhongController extends Controller
         $phong->TRANGTHAI='Trống';
         $phong->save();
         return redirect('view_admin/QuanLyPhong/danhsach');
+    }
+
+    public function getHuyPhieuDatPhong(){
+        session_start();
+        DB::select(
+            'call PRO_HUYPHIEUDATPHONG(?)',
+            [$_SESSION['maphieu']]
+        );
+        return redirect('view_admin/QuanLyPhong/danhsach')->with('thongbao','Bạn đã hủy đặt phòng thành công');
+    }
+
+    public function getNhanPhong(){
+        session_start();
+        $phieu=phieudatphong::where('MAPHIEU','=',$_SESSION['maphieu'])->first();
+        DB::select(
+            'call PRO_NHANPHONGDADATTRUOC(?,?,?,?,?)',
+            [
+                $phieu->MAPHONG,
+                $phieu->MAKHACHHANG,
+                $phieu->MANHANVIEN,
+                $phieu->NGAYDEN,
+                $phieu->NGAYDI
+            ]
+        );
+        return redirect('view_admin/QuanLyPhong/danhsach')->with('thongbao','Bạn đã nhận phòng thàng công');
     }
 }

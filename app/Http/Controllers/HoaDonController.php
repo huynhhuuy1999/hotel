@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\hoadon;
+use App\chitiethoadon;
 use PDF;
 use DB;
 
@@ -82,5 +83,13 @@ class HoaDonController extends Controller
         echo "</tr>";
         echo "</tbody>";
         echo "</table>";
+    }
+
+    public function getInHoaDon($mahd){
+        
+        $hoadon=hoadon::where('MAHOADON','=',$mahd)->first();
+        $cthd=chitiethoadon::where('MAHOADON','=',$mahd)->get();
+        $pdf=PDF::loadView('view_admin.PDF.InHoaDon',['hoadon'=>$hoadon,'cthd'=>$cthd]);
+        return $pdf->download('InHoaDon.pdf');
     }
 }

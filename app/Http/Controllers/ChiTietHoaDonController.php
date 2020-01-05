@@ -45,6 +45,7 @@ class ChiTietHoaDonController extends Controller
     	echo "<td>".$tongtien."</td>";
     	echo "</tr>";
     	echo "</table>";
+        echo "<button class='btn btn-success hoadon' id='".$mahoadon."'>In hoá đơn</button>";
     	echo "</div>";
     	echo "</div>";
     }
@@ -70,5 +71,7 @@ class ChiTietHoaDonController extends Controller
         }
         return redirect('view_admin/QuanLyPhong/danhsach');
     }
+
+
 }
 ?>

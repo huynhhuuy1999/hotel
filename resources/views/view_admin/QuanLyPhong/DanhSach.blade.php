@@ -69,7 +69,11 @@
 						"Đặt phòng thất bại"
 					</div>
 				@endif
-
+				@if(session('thongbao'))
+					<div class="alert alert-success">
+						{{session('thongbao')}}
+					</div>		
+				@endif
 				@if(session('thongbao1'))
 					<div class="alert alert-danger">
 						{{session('thongbao1')}}
@@ -410,7 +414,6 @@
 	    	@endforeach
 	    	
 	    });
-	    
 	</script>
 </body>
 </html>

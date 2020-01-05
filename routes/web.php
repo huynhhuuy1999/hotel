@@ -82,6 +82,8 @@ Route::group(['prefix'=> 'view_admin','middleware'=>'adminLogin'],function(){
 		Route::post('thuephong','PhongController@postThuePhong')->name('thuePhong_phong');
 		Route::get('traphong','PhongController@getTraPhong')->name('traphong_phong');
 		Route::get('donphong','PhongController@getDonPhong')->name('donphong_phong');
+		Route::get('huydatphong','PhongController@getHuyPhieuDatPhong')->name('huydatphong_phong');
+		Route::get('nhanphong','PhongController@getNhanPhong')->name('nhanphong_phong');
 	});
 
 	Route::group(['prefix'=>'QuanLyPhieuDatPhong'],function(){
@@ -95,6 +97,7 @@ Route::group(['prefix'=> 'view_admin','middleware'=>'adminLogin'],function(){
 		Route::get('thongke','HoaDonController@getThongKe')->name('thongke_hoadon');
 		Route::get('pdfHoaDon','HoaDonController@getPDF')->name('pdf_hoadon');
 		Route::get('xemThongKe/{id1}/{id2}','HoaDonController@getXemThongKe')->name('xemthongke_hoadon');
+		Route::get('inhoadon/{id}','HoaDonController@getInHoaDon')->name('inhoadon_hoadon');
 	});
 
 	Route::group(['prefix'=>'QuanLyChiTietHoaDon'],function(){

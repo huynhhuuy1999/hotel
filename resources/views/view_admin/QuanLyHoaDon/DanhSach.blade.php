@@ -117,6 +117,25 @@
       		return false;
  		});
 
+ 		$(document).on('click','.hoadon',function(){
+ 			var mahd=$(this).attr('id');
+
+ 			var url="{{ url('view_admin/QuanLyHoaDon/inhoadon/')}}";
+ 			$.ajax({
+ 				url:url+"/"+mahd,
+ 				data:'_token = <?php echo csrf_token() ?>',
+ 				type:"GET",
+ 				success:function(data){
+ 					$('#over, .thongtincthd').fadeOut(300 , function() {
+	           			$('#over,.thongtincthd').remove();
+	       			});
+ 				},
+ 				error: function(err){
+ 					alert(err);
+ 				}
+ 			});
+ 		});
+
  		$(document).ready(function () {
 			$('#verticalScroll').DataTable({
 				"scrollY": "380px",
@@ -124,6 +143,7 @@
 			});
 			$('.dataTables_length').addClass('bs-select');
 		});
+
 	</script>
 </body>
 </html>
