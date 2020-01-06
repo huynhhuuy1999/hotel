@@ -1,0 +1,25 @@
+*{
+	font-family: DejaVu Sans !important;
+}
+h3{
+	text-align: center;
+}
+.diachi{
+	text-align: center;
+}
+#ngay{
+	float: right;
+}
+.ttkh{
+	padding: 20px;
+}
+.bang{
+	margin-top: 15px;
+}
+table{
+	width: 520px;
+	margin-left:100px; 
+}
+.chuki{
+	float: right;
+}

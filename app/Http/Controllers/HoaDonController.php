@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\hoadon;
 use App\chitiethoadon;
+use Carbon\Carbon;
 use PDF;
 use DB;
 
@@ -86,10 +87,10 @@ class HoaDonController extends Controller
     }
 
     public function getInHoaDon($mahd){
-        
+        $ngay=Carbon::now('Asia/Ho_Chi_Minh');
         $hoadon=hoadon::where('MAHOADON','=',$mahd)->first();
         $cthd=chitiethoadon::where('MAHOADON','=',$mahd)->get();
-        $pdf=PDF::loadView('view_admin.PDF.InHoaDon',['hoadon'=>$hoadon,'cthd'=>$cthd]);
+        $pdf=PDF::loadView('view_admin.PDF.InHoaDon',['hoadon'=>$hoadon,'cthd'=>$cthd,'ngay'=>$ngay]);
         return $pdf->download('InHoaDon.pdf');
     }
 }
