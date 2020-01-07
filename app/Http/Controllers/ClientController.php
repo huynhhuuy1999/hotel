@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\phong;
-// use App\Rules\NgayDi;
 use DB;
 
 class ClientController extends Controller
@@ -82,6 +81,10 @@ class ClientController extends Controller
         if($rq->ngaydi< $rq->ngayden){
             return redirect('view_client/phong/formDatPhong')->with('thongbao1','Ngày đi phải lớn hơn ngày đến');
         }
-		return redirect('view_client/phong/formDatPhong')->with('thongbao','Đặt phòng thành công');
+		return redirect('view_client/phong/thongBaoDatPhong')->with('thongbao','Đặt phòng thành công');
+    }
+
+    public function getThongBao(){
+        return view('view_client.thongBaoDatPhong');
     }
 }

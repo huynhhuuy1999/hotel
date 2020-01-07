@@ -20,6 +20,7 @@ Route::group(['prefix'=>'view_client'],function(){
 		Route::get('phongDoi','ClientController@getPhongDoi')->name('view_PhongDoi');
 		Route::get('formDatPhong','ClientController@getFormDatPhong')->name('view_FormDatPhong');
 		Route::post('datphong','ClientController@postDatPhong')->name('client_datphong');
+		Route::get('thongBaoDatPhong','ClientController@getThongBao')->name('client_thongbao');
 	});
 });
 
